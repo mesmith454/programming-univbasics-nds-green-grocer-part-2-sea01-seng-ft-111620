@@ -21,28 +21,6 @@ end
 def apply_clearance(cart)
  cart.each do |product_name, stats|
     stats[:price] -= stats[:price] * 0.2 if stats[:clearance]
-end
+  end
 cart
-end
-
-
-def checkout(cart, coupons)
-  # Consult README for inputs and outputs
-  #
-  # This method should call
-  # * consolidate_cart
-  # * apply_coupons
-  # * apply_clearance
-  #
-  # BEFORE it begins the work of calculating the total (or else you might have
-  # some irritated customers
-  
-   total = 0 
-  new_cart = consolidate_cart(cart) 
-  coupon_cart = apply_coupons(new_cart, coupons) 
-  clearance_cart = apply_clearance(coupon_cart) 
-  clearance_cart.each do |item, attribute| 
-    total += (attribute[:price] * attribute[:count])
-  end 
-total = (total * 0.9) if total > 100 total 
 end
