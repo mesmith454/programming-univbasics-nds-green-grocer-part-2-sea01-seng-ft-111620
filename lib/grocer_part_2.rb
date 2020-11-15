@@ -1,15 +1,25 @@
-def apply_coupons(cart, coupons)
-  # code here	coupons.each do |coupon|
-  name = coupon[:item] #makes things easier
+require_relative './part_1_solution.rb'
 
-  if cart[name] && cart[name][:count] >= coupon[:num]
-    if cart["#{name} W/COUPON"]
-      cart["#{name} W/COUPON"][:count] += coupon[:num]
-    else
-      cart["#{name} W/COUPON"] = {:price => coupon[:cost]/coupon[:num], :clearance => cart[name][:clearance], :count => coupon[:num]}
-    end
-  cart[name][:count] -= coupon[:num]
-  end
+def apply_coupons(cart, coupons)
+  # Consult README for inputs and outputs
+  #
+  # REMEMBER: This method **should** update cart
 end
-cart
+
+def apply_clearance(cart)
+  # Consult README for inputs and outputs
+  #
+  # REMEMBER: This method **should** update cart
+end
+
+def checkout(cart, coupons)
+  # Consult README for inputs and outputs
+  #
+  # This method should call
+  # * consolidate_cart
+  # * apply_coupons
+  # * apply_clearance
+  #
+  # BEFORE it begins the work of calculating the total (or else you might have
+  # some irritated customers
 end
