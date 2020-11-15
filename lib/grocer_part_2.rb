@@ -13,9 +13,6 @@ def apply_coupons(cart, coupons)
         cart["#{name} W/COUPON"][:price] = coupons[i][:cost]/coupons[i][:num]
         cart["#{name} W/COUPON"][:clearance] = cart[name][:clearance]
       end
-      # if cart[name][:count] == 0
-      #   cart.delete(name)
-      # end
     end
   end
   cart
